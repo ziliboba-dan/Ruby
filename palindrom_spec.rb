@@ -1,22 +1,16 @@
 require 'rspec'
 require_relative 'palindrom.rb'
 
-RSpec.describe Palindrom do
-
-    it 'should be Топот is palindrom' do
-        pal = Palindrom.new()
-        pal.word = "Топот"
-        expect(pal.check).to be true
+RSpec.describe Word do
+  describe '#palidrom?' do
+    subject { Word.new(word) } 
+    context 'the word is a palindorm' do
+      let(:word) { 'Topot' }
+      it { is_expected.to be_palidrom }
     end
-
-    it 'should be Tipot is not palindrom' do
-        pal = Palindrom.new()
-        pal.word = "Tipot"
-        expect(pal.check).to be false
+    context 'the word is not a palindorm' do
+      let(:word) { 'Tipot' }
+      it { is_expected.not_to be_palidrom }
     end
-    it 'should be Topot is  palindrom' do
-        pal = Palindrom.new()
-        pal.word = "Topot"
-        expect(pal.check).to be true
-    end
+  end
 end
