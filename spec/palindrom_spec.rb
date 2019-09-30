@@ -1,5 +1,5 @@
 require 'rspec'
-require_relative 'class/palindrom.rb'
+require_relative 'palindrom.rb'
 
 RSpec.describe Word do
   describe '#palidrom?' do

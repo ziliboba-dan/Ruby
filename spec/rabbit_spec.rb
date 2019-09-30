@@ -1,5 +1,5 @@
 require 'rspec'
-require_relative 'class/rabbit.rb'
+require_relative 'rabbit.rb'
 
 RSpec.describe Fib do
   

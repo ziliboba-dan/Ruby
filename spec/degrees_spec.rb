@@ -1,5 +1,5 @@
 require 'rspec'
-require_relative 'class/degrees.rb'
+require_relative 'degrees.rb'
   RSpec.describe Degree do
   subject(:degree) { Degree.new }
 	describe '#C' do

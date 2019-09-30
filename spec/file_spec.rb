@@ -1,5 +1,5 @@
 require 'rspec'
-require_relative 'class/file.rb'
+require_relative 'file.rb'
 
 RSpec.describe Doc do
   describe 'calculation' do
@@ -10,10 +10,11 @@ RSpec.describe Doc do
         expect(doc.maximum).to eq 999
       end
     end
-    context '#minimum' do
-      subject { doc.minimum }
+    context 'minimum' do
       let(:array) { [123, 21, 234, 999, 444, 777, 967] }
-      it { is_expected.to eq 21 }
+      it 'should be 21' do
+        expect(doc.minimum).to eq 21
+      end
     end
     context 'average' do
       let(:array) { [5, 3, 1, 1] }
